@@ -2,4 +2,8 @@
     <string name="app_name">Newsflash</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    
+    <string name="sample_title">First Corporate Bond Deals Show How Expensive Debt Will Be in 2023</string>
+    <string name="sample_summary">Pricing for the first corporate bond deals of 2023 suggests it’s going to cost European companies a lot more to issue debt than it did a year ago. More than twice as much, in the case of Renault SA’s finance company.</string>
+    <string name="sample_abstract">Issuers are marketing first euro company debt of the year</string>
 </resources>
