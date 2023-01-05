@@ -9,6 +9,7 @@ import java.io.IOException
 class NewsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        supportActionBar?.hide()
         setContentView(R.layout.activity_news)
 
         var client = OkHttpClient()
@@ -33,7 +34,6 @@ class NewsActivity : AppCompatActivity() {
                     throw IOException("Error $response")
                 }
                 else{
-                    //implement handling of response with JSON
 
                 }
             }

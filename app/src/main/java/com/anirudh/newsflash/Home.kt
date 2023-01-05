@@ -18,6 +18,11 @@ class Home : AppCompatActivity() {
         var newsFragment = NewsFragment()
         var profileFragment = ProfileFragment()
 
+        supportFragmentManager.beginTransaction().apply {
+            replace(R.id.flView,topicsfragment)
+            commit()
+        }
+
         findViewById<BottomNavigationView>(R.id.bottomNavigation).setOnItemSelectedListener{
             when(it.itemId){
                 R.id.topic -> setCurrentFragment(topicsfragment)

@@ -14,7 +14,10 @@ import org.w3c.dom.Text
 
 class TopicsAdapter (var topicList : MutableList<TopicCard>) : RecyclerView.Adapter<TopicsAdapter.TopicViewHolder>() {
 
-    inner class TopicViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
+    inner class TopicViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
+        val title:TextView = itemView.findViewById<TextView>(R.id.title)
+        val favIcon:ImageView = itemView.findViewById<ImageView>(R.id.favIcon)
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TopicViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.topic_item,parent,false)
@@ -23,12 +26,12 @@ class TopicsAdapter (var topicList : MutableList<TopicCard>) : RecyclerView.Adap
 
     override fun onBindViewHolder(holder: TopicViewHolder, position: Int) {
         holder.itemView.apply {
-            findViewById<TextView>(R.id.title).text = topicList[position].title
+            holder.title.text = topicList[position].title
             if(topicList[position].favourtie){
-                findViewById<ImageView>(R.id.favIcon).setImageResource(R.drawable.ic_baseline_favorite_24)
+                holder.favIcon.setImageResource(R.drawable.ic_baseline_favorite_24)
             }
             else{
-                findViewById<ImageView>(R.id.favIcon).setImageResource(R.drawable.ic_outline_favorite_border_24)
+                holder.favIcon.setImageResource(R.drawable.ic_outline_favorite_border_24)
             }
         }
 

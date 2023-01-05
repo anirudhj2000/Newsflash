@@ -24,7 +24,12 @@ private const val ARG_PARAM2 = "param2"
  * Use the [TopicsFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
+
 class TopicsFragment : Fragment(R.layout.fragment_topics) {
+
+    private lateinit var adapter: TopicsAdapter
+    private lateinit var recyclerView: RecyclerView
+    private lateinit var topiclist : MutableList<TopicCard>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,36 +38,13 @@ class TopicsFragment : Fragment(R.layout.fragment_topics) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        initalizeData()
 
-        val topicList = mutableListOf(
-            TopicCard("markets",true),
-            TopicCard("technology",true),
-            TopicCard("view",true),
-            TopicCard("pursuits",true),
-            TopicCard("politics",true),
-            TopicCard("green",true),
-            TopicCard("citylab",true),
-            TopicCard("businessweek",true),
-            TopicCard("fixed-income",true),
-            TopicCard("hyperdrive",true),
-            TopicCard("cryptocurrencies",true),
-            TopicCard("cryptocurrencies",true),
-            TopicCard("wealth",true),
-            TopicCard("latest",true),
-            TopicCard("personalFinance",true),
-            TopicCard("quickTake",true),
-            TopicCard("world",true),
-            TopicCard("industries",true),
-            TopicCard("stocks",true),
-            TopicCard("currencies",true),
-        )
+        recyclerView = view.findViewById<RecyclerView>(R.id.topicsRecycler)
+        adapter = TopicsAdapter(topiclist)
+        recyclerView.adapter = adapter
+        recyclerView.layoutManager = GridLayoutManager(this.context,3)
 
-        val recycler = view.findViewById<RecyclerView>(R.id.topicsRecycler)
-        val adapter = TopicsAdapter(topicList)
-        recycler.adapter = adapter
-        recycler.layoutManager = GridLayoutManager(this.context,4)
-
-        view.findViewById<RecyclerView>(R.id.topicsRecycler)
 
         adapter.onItemClick = {
             var topic = it.title
@@ -74,6 +56,30 @@ class TopicsFragment : Fragment(R.layout.fragment_topics) {
 
     }
 
+    private fun initalizeData(){
+        topiclist = mutableListOf(
+            TopicCard("markets",true),
+            TopicCard("technology",true),
+            TopicCard("view",true),
+            TopicCard("pursuits",false),
+            TopicCard("politics",true),
+            TopicCard("green",true),
+            TopicCard("citylab",true),
+            TopicCard("businessweek",true),
+            TopicCard("fixed-income",false),
+            TopicCard("hyperdrive",true),
+            TopicCard("cryptocurrencies",true),
+            TopicCard("cryptocurrencies",true),
+            TopicCard("wealth",true),
+            TopicCard("latest",true),
+            TopicCard("personalFinance",false),
+            TopicCard("quickTake",true),
+            TopicCard("world",true),
+            TopicCard("industries",false),
+            TopicCard("stocks",true),
+            TopicCard("currencies",true),
+        )
+    }
 
 
 }
