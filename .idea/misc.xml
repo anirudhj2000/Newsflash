@@ -7,15 +7,19 @@
         <entry key="app/src/main/res/drawable/ic_baseline_favorite_24.xml" value="0.1025" />
         <entry key="app/src/main/res/drawable/ic_outline_favorite_border_24.xml" value="0.142" />
         <entry key="app/src/main/res/drawable/news_see_more_drawable.xml" value="0.142" />
+        <entry key="app/src/main/res/drawable/profile_card.xml" value="0.1505" />
+        <entry key="app/src/main/res/drawable/profile_item.xml" value="0.1505" />
+        <entry key="app/src/main/res/drawable/profile_item_drawable.xml" value="0.1505" />
         <entry key="app/src/main/res/drawable/topic_card.xml" value="0.142" />
         <entry key="app/src/main/res/layout/activity_home.xml" value="0.2947916666666667" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.31309814453125" />
         <entry key="app/src/main/res/layout/activity_news.xml" value="0.20052083333333334" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.14010416666666667" />
         <entry key="app/src/main/res/layout/fragment_news.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.14010416666666667" />
+        <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.2754277581859894" />
         <entry key="app/src/main/res/layout/fragment_topics.xml" value="0.21421152750651035" />
         <entry key="app/src/main/res/layout/news_item.xml" value="0.19947916666666668" />
+        <entry key="app/src/main/res/layout/profile_item.xml" value="0.23528442382812498" />
         <entry key="app/src/main/res/layout/topic_item.xml" value="0.898876404494382" />
         <entry key="app/src/main/res/menu/bottom_nav.xml" value="0.29375" />
       </map>
